@@ -114,7 +114,9 @@ class Easy_upload {
             $ret_filename = $file_uploaded['raw_name'] . $file_uploaded['file_ext'];
             
             // if file uploaded is image, would it be created image thumbnail
-            if (isset($cur_config['image_lib']['create_thumb']) && in_array($file_uploaded['file_type'], array('image/bmp', 'image/x-windows-bmp', 'image/jpeg', 'image/pjpeg', 'image/gif', 'image/png',  'image/x-png')) ) 
+            if (isset($cur_config['image_lib']['create_thumb']) 
+            	&& $cur_config['image_lib']['create_thumb'] == true
+            	&& in_array($file_uploaded['file_type'], array('image/bmp', 'image/x-windows-bmp', 'image/jpeg', 'image/pjpeg', 'image/gif', 'image/png',  'image/x-png')) ) 
             {
 				// get active image lib configuration
                 $imagelib_config = $cur_config['image_lib'];
