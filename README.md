@@ -33,5 +33,6 @@ $config["cutsom"]['file_upload']['allowed_types'] = "pdf|doc|docx|xls|xlsx|rtf";
 - in controller you can use this code:
 ```php
 $this->load->library('easy_upload');
-$this->easy_upload->upload_file('the_image'); // the_image is name of HTML input elemen
+$file1 = $this->easy_upload->upload_file('the_image'); // the_image is name of HTML input elemen
+$file2 = $this->easy_upload->upload_file('the_doc', 'cutsom');
 ```
